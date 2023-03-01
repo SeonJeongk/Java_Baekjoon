@@ -1,13 +1,14 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class N_2751 {
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		int num = input.nextInt();	//the number of number
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));	
+		int num = Integer.parseInt(br.readLine());	//the number of number
 		int[] ascend = new int[num];
 		
 		for(int i = 0; i < num; i++) {
-			ascend[i] = input.nextInt(); //get integer number
+			ascend[i] = Integer.parseInt(br.readLine()); //get integer number
 			for(int j = 0; j < i; j++) {
 				if(ascend[j] > ascend[i]) {
 					int temp = ascend[j];
